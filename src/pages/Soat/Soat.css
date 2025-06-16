@@ -25,6 +25,25 @@
   color: var(--accent);
 }
 
+.soat-output {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.soat-date {
+  font-size: 1.8rem;
+  font-family: 'Roboto Mono', monospace;
+  color: var(--text);
+  background: linear-gradient(90deg, #b7b3b3, var(--accent));
+  padding: 0.4rem 1.2rem;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 1s ease;
+}
+
 .soat-time {
   font-size: 4rem;
   font-weight: bold;
@@ -66,6 +85,11 @@
 
   .soat-time {
     font-size: 2.5rem;
+  }
+
+  .soat-date {
+    font-size: 1.2rem;
+    padding: 0.3rem 0.8rem;
   }
 
   .soat-icon {
