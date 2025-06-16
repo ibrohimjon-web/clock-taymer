@@ -1,0 +1,108 @@
+/* Global stil o'zgaruvchilarni qo‘llab-quvvatlash */
+:root {
+  --accent: #00c6ff;
+  --font-weight: bold;
+  --bg: #111111;
+  --text: #eeeeee;
+}
+
+body.light {
+  --bg: #ffffff;
+  --text: #222222;
+  --accent: #0072ff;
+}
+
+body.dark {
+  --bg: #111111;
+  --text: #eeeeee;
+  --accent: #00c6ff;
+}
+
+.sekundomer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 84vh;
+  padding: 1.5rem;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.sekundomer-title {
+  font-size: 2.5rem;
+  font-weight: var(--font-weight);
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, var(--accent), #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sekundomer-time {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 1rem 0 2rem 0;
+  color: transparent;
+  background: linear-gradient(90deg, var(--accent), #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Tugmalar konteyneri */
+.sekundomer-controls {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 2px solid var(--text);
+  border-radius: 20px;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--accent);
+  color: var(--bg);
+  border-color: transparent;
+  transform: scale(1.05);
+}
+
+/* Reset tugmasi */
+.btn-reset {
+  border-color: #ff6b6b;
+  color: #ff6b6b;
+}
+
+.btn-reset:hover {
+  background-color: #ff6b6b;
+  color: #fff;
+  border-color: transparent;
+}
+
+@media (max-width: 600px) {
+  .sekundomer-time {
+    font-size: 3rem;
+  }
+
+  .sekundomer-controls {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

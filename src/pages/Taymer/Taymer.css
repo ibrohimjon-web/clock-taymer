@@ -1,0 +1,133 @@
+.taymer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 84vh;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: all 0.4s ease;
+  padding: 1rem;
+  text-align: center;
+}
+
+.taymer-title {
+  font-size: 2.5rem;
+  font-weight: var(--font-weight);
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.taymer-time {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 4rem;
+  font-weight: bold;
+  color: transparent;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+}
+
+.taymer-controls {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  border: 2px solid var(--text);
+  background: transparent;
+  color: var(--text);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--accent);
+  color: var(--bg);
+  border-color: transparent;
+  transform: scale(1.05);
+}
+
+.btn-reset {
+  border-color: #ff6b6b;
+  color: #ff6b6b;
+}
+
+.btn-reset:hover {
+  background-color: #ff6b6b;
+  color: #fff;
+  border-color: transparent;
+}
+
+.input-wrapper {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-group label {
+  font-weight: var(--font-weight);
+  margin-bottom: 0.3rem;
+  color: var(--text);
+}
+
+.input-group input {
+  width: 60px;
+  padding: 0.4rem;
+  font-size: 1.2rem;
+  text-align: center;
+  border: 2px solid var(--text);
+  border-radius: 8px;
+  background-color: var(--bg);
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: var(--accent);
+}
+
+.input-group input:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+  color: #777;
+}
+
+@media (max-width: 600px) {
+  .taymer-time {
+    font-size: 3rem;
+  }
+
+  .taymer-controls {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .input-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}

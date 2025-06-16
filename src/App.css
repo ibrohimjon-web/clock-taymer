@@ -1,0 +1,18 @@
+:root {
+  --accent: #00c6ff;
+  --font-weight: bold;
+  --bg: #111111;
+  --text: #eeeeee;
+}
+
+body.light {
+  --bg: #ffffff;
+  --text: #222222;
+  --accent: #0072ff;
+}
+
+body.dark {
+  --bg: #111111;
+  --text: #eeeeee;
+  --accent: #00c6ff;
+}

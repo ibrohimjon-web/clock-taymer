@@ -1,0 +1,74 @@
+.soat-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  min-height: 84vh;
+  background-color: var(--bg);
+  color: var(--text);
+  animation: fadeIn 1s ease;
+}
+
+.soat-title {
+  font-size: 2.5rem;
+  margin-bottom: 1.2rem;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.soat-icon {
+  font-size: 2.2rem;
+  color: var(--accent);
+}
+
+.soat-time {
+  font-size: 4rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-family: 'Roboto Mono', monospace;
+  background: linear-gradient(90deg, var(--accent), #6ac1ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+}
+
+@media (max-width: 600px) {
+  .soat-title {
+    font-size: 1.8rem;
+  }
+
+  .soat-time {
+    font-size: 2.5rem;
+  }
+
+  .soat-icon {
+    font-size: 1.8rem;
+  }
+}
